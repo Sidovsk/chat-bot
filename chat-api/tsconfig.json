@@ -1,0 +1,26 @@
+{
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
+  "tsc": {
+    "require": ["tsconfig-paths/register"]
+  },
+  "compilerOptions":
+    {
+      "target": "es2018",
+      "module": "commonjs",
+      "experimentalDecorators": true,
+      "outDir": "dist",
+      "sourceMap": true,
+      "baseUrl": "./",
+      "paths": {
+        "@common/*": ["src/common/*"],
+        "@application/*": ["src/application/*"],
+        "@domain/*": ["src/domain/*"],
+        "@infra/*": ["src/infra/*"],
+        "@presentation/*": ["src/presentation/*"]
+      },
+    },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

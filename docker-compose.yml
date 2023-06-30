@@ -1,0 +1,20 @@
+version: '3'
+services:
+  chat-api:
+    build:
+      context: ./chat-api
+      dockerfile: Dockerfile
+    container_name: 'chat-api'
+    ports:
+      - '4000:4000'
+    env_file: ./chat-api/.env
+  chat-web:
+    build:
+      context: ./chat-web
+      dockerfile: Dockerfile
+    container_name: 'chat-web'
+    ports:
+      - '3000:3000'
+    env_file: ./chat-web/.env
+    depends_on:
+      - chat-api

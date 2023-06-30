@@ -1,0 +1,46 @@
+{
+  "name": "chat-api",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/main.js",
+    "start:dev": "nodemon -r dotenv/config --watch 'src/' --exec 'ts-node src/main.ts' -e ts",
+    "build": "tsc -b && tsc-alias",
+    "test": "jest --config ./jest.config.unit.ts",
+    "test:watch": "yarn test --watch",
+    "test:coverage": "yarn test --coverage",
+    "test:unit": "jest --config ./jest.config.unit.ts",
+    "test:integration": "jest --config ./jest.config.integration.ts",
+    "nlp:train": "node ./nlp-model/train-nlp",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "socket.io-client": "^4.6.1",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.5",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "4.9.4"
+  },
+  "dependencies": {
+    "inversify": "^6.0.1",
+    "module-alias": "^2.2.2",
+    "node-nlp": "^4.26.1",
+    "reflect-metadata": "^0.1.13",
+    "socket.io": "^4.6.1"
+  }
+}

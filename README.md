@@ -1,6 +1,4 @@
-# Chat - Web Development Challenge 
-
-![Screenshot](screenshot.png)
+ ![Screenshot](screenshot.png)
 
 ## Instructions to run project
 ### Docker + Docker Compose
